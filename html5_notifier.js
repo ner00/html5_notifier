@@ -15,7 +15,7 @@ function rcmail_show_notification(message)
     {
         if ("Notification" in window) {
             var notification = new Notification(rcmail.gettext('notification_title', 'html5_notifier').replace('[from]', message.from), {
-                icon: './plugins/html5_notifier/images/new_mail.png',
+                icon: './static.php/plugins/html5_notifier/images/new_mail.png',
                 body: message.subject
             });
             notification.onclick = function() {
