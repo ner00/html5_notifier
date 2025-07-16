@@ -18,7 +18,7 @@ class html5_notifier extends rcube_plugin
     {
         $RCMAIL = rcmail::get_instance();
 
-        if(file_exists("./plugins/html5_notifier/config/config.inc.php"))
+        if(file_exists("../plugins/html5_notifier/config/config.inc.php"))
         {
             $this->load_config('config/config.inc.php');
         }
