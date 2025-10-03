@@ -15,7 +15,7 @@ function rcmail_show_notification(message)
     {
         if ("Notification" in window) {
             var notification = new Notification(rcmail.gettext('notification_title', 'html5_notifier').replace('[from]', message.from), {
-                icon: './static.php/plugins/html5_notifier/images/new_mail.png',
+                icon: rcmail.assets_path('plugins/html5_notifier/images/new_mail.png'),
                 body: message.subject
             });
             notification.onclick = function() {
@@ -143,3 +143,4 @@ if (window.rcmail)
     rcmail.addEventListener('plugin.showNotification', rcmail_show_notification);
     rcmail.addEventListener('init', rcmail_check_notifications);
 }
+
